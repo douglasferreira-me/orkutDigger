@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Orkut Digger",
+  "version": "0.1.0",
+  "description": "Em desenvolvimento: exporte dados de comunidades preservadas do Orkut para pesquisa.",
+  "action": {"default_popup": "popup.html"},
+  "permissions": ["activeTab"]
+}
