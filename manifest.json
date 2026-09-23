@@ -1,8 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Orkut Digger",
-  "version": "0.1.0",
-  "description": "Em desenvolvimento: exporte dados de comunidades preservadas do Orkut para pesquisa.",
+  "version": "1.0.0",
+  "description": "Exporte comunidades históricas do Orkut preservadas no Internet Archive para CSV.",
   "action": {"default_popup": "popup.html"},
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab", "downloads", "storage"],
+  "host_permissions": ["https://web.archive.org/*"],
+  "browser_specific_settings": {
+    "gecko": { "id": "orkut-digger@douglasferreira.me", "strict_min_version": "121.0" }
+  }
 }
