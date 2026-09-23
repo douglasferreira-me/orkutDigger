@@ -36,6 +36,7 @@ export function pageKey(url) {
 }
 
 export function topicId(url) { const match = originalUrl(url).match(/-t([^-./?#]+)/i); return match ? match[1] : ""; }
+export function replyId(url) { const match = originalUrl(url).match(/-r([^-./?#]+)/i); return match ? match[1] : ""; }
 export function forumUrl(profileUrl, id) { return profileUrl.replace(new RegExp(`c${id}(?:-[^/?#]+)?\\.html`, "i"), `c${id}-f.html`); }
 
 export function discoverLinks(document, currentUrl, id) {
@@ -82,6 +83,17 @@ export function parseResponses(document, currentUrl, topic) {
     const body = node.querySelector(".messageBody,.postText,.replyText,.body") || node;
     return { id: node.dataset.id || node.id || `${topic.id}-${index + 1}`, author: cleanText(node.querySelector(".author,.userName,.profileName,a[href*='p']")?.textContent), date: cleanText(node.querySelector(".date,.postDate,.timestamp,time")?.textContent), text: cleanText(body.innerText || body.textContent), url: currentUrl };
   }).filter(response => response.text);
+}
+
+export function parseReply(document, currentUrl) {
+  const topic = { id: topicId(currentUrl), title: "", url: currentUrl.replace(/-r[^./?#]+(?=\.html)/i, ""), responses: [], errors: [] };
+  const title = document.querySelector(".topicTitle,.forumTopicTitle,h1,h2,title");
+  topic.title = cleanText(title?.textContent);
+  const author = cleanText(document.querySelector(".typoTopicCreator,.author,.userName,.profileName")?.textContent);
+  const date = cleanText(document.querySelector(".typoSectionLessImportantText.messageMetadata,.date,.postDate,.timestamp,time")?.textContent);
+  const body = document.querySelector(".messageBody,.postText,.replyText,.body,main") || document.body;
+  topic.responses = [{ id: replyId(currentUrl) || `${topic.id}-reply`, author, date, text: cleanText(body?.innerText || body?.textContent), url: currentUrl }].filter(response => response.text);
+  return topic;
 }
 
 export function formatResponses(responses) { return responses.map((response, index) => `${index + 1}. ${response.author || response.date ? `[${[response.author, response.date].filter(Boolean).join(" — ")}] ` : ""}${response.text}`).join("\n\n"); }

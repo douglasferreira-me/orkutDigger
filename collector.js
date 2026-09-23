@@ -1,4 +1,4 @@
-import { cleanText, communityId, csvCell, discoverLinks, formatResponses, forumUrl, pageKey, pageKind, parseForumTopics, parseProfile, parseResponses, parseTopic } from "./core.js";
+import { cleanText, communityId, csvCell, discoverLinks, formatResponses, forumUrl, pageKey, pageKind, parseForumTopics, parseProfile, parseReply, parseResponses, parseTopic } from "./core.js";
 
 const api = globalThis.browser ?? globalThis.chrome;
 const MAX_PAGES = 10_000;
@@ -58,6 +58,7 @@ async function collect() {
       const fetched = await fetchDocument(url); const kind = pageKind(fetched.url, job.community.id);
       if (kind === "forum") for (const topic of parseForumTopics(fetched.document, fetched.url, job.community.id)) { const merged = mergeTopic(topics.get(topic.id), topic); topics.set(topic.id, merged); await persistTopic(merged); }
       if (kind === "topic") { const parsed = parseTopic(fetched.document, fetched.url); if (parsed.id) { parsed.responses = parseResponses(fetched.document, fetched.url, parsed); const merged = mergeTopic(topics.get(parsed.id), parsed); topics.set(parsed.id, merged); await persistTopic(merged); } }
+      if (kind === "reply") { const parsed = parseReply(fetched.document, fetched.url); if (parsed.id) { const merged = mergeTopic(topics.get(parsed.id), parsed); topics.set(parsed.id, merged); await persistTopic(merged); } }
       for (const link of discoverLinks(fetched.document, fetched.url, job.community.id)) if (!visited.has(pageKey(link))) job.queue.push(link);
     } catch (error) {
       const kind = pageKind(url, job.community.id); const id = kind === "topic" ? url.match(/-t([^-./?#]+)/i)?.[1] : "";
