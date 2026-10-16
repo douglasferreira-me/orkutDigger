@@ -1,5 +1,7 @@
 # Orkut Digger
 
+<p align="center"><img src="assets/orkut-digger-logo.png" width="192" alt="Logo do Orkut Digger"></p>
+
 Extensão para Chrome e Firefox que exporta, em CSV, os tópicos e as respostas disponíveis em uma comunidade do Orkut preservada no [Internet Archive](https://web.archive.org/).
 
 ## Como usar
@@ -28,3 +30,25 @@ Execute `./package.sh`. O script cria os dois arquivos na pasta `dist/`; o ZIP d
 ## Desenvolvimento
 
 Não há dependências de compilação. A lógica de URLs e extração fica em `core.js`; a página `collector.html` mantém a coleta e o checkpoint no IndexedDB da extensão. Verifique a sintaxe com `node --check core.js && node --check collector.js`.
+
+## Parcerias
+
+<p>
+  <a href="https://condadolab.org/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/partners/condado-lab.png">
+      <img src="assets/partners/condado-lab-light.png" height="64" alt="Condado Lab">
+    </picture>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://oasisufrj.org/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/partners/oasis.png">
+      <img src="assets/partners/oasis-light.png" height="64" alt="Oásis — UFRJ">
+    </picture>
+  </a>
+</p>
+
+[Condado Lab](https://condadolab.org/) · [Oásis — UFRJ](https://oasisufrj.org/)
+
+Logos institucionais obtidas nos sites oficiais dos parceiros; pertencem às respectivas instituições.

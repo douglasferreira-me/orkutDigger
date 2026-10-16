@@ -3,7 +3,8 @@
   "name": "Orkut Digger",
   "version": "1.0.0",
   "description": "Exporte comunidades históricas do Orkut preservadas no Internet Archive para CSV.",
-  "action": {"default_popup": "popup.html"},
+  "icons": {"16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "96": "icons/icon-96.png", "128": "icons/icon-128.png"},
+  "action": {"default_popup": "popup.html", "default_icon": {"16": "icons/icon-16.png", "32": "icons/icon-32.png"}},
   "permissions": ["activeTab", "downloads", "storage"],
   "host_permissions": ["https://web.archive.org/*"],
   "browser_specific_settings": {
