@@ -1,6 +1,6 @@
 # Orkut Digger
 
-<p align="center"><img src="assets/orkut-digger-logo-v2.png" width="192" alt="Logo do Orkut Digger"></p>
+<p align="center"><img src="assets/orkut-digger-logo-v3.png" width="192" alt="Logo do Orkut Digger: pá magenta com cabo em forma de o"></p>
 
 Extensão para Chrome e Firefox que exporta, em CSV, os tópicos e as respostas disponíveis em uma comunidade do Orkut preservada no [Internet Archive](https://web.archive.org/).
 
@@ -35,10 +35,7 @@ Não há dependências de compilação. A lógica de URLs e extração fica em `
 
 <p>
   <a href="https://condadolab.org/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/partners/condado-lab.png">
-      <img src="assets/partners/condado-lab-light.png" height="64" alt="Condado Lab">
-    </picture>
+    <img src="assets/partners/condado-lab-readme.png" height="80" alt="Condado Lab">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://oasisufrj.org/">
