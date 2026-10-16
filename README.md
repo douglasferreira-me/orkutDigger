@@ -1,6 +1,6 @@
 # Orkut Digger
 
-<p align="center"><img src="assets/orkut-digger-logo.png" width="192" alt="Logo do Orkut Digger"></p>
+<p align="center"><img src="assets/orkut-digger-logo-v2.png" width="192" alt="Logo do Orkut Digger"></p>
 
 Extensão para Chrome e Firefox que exporta, em CSV, os tópicos e as respostas disponíveis em uma comunidade do Orkut preservada no [Internet Archive](https://web.archive.org/).
 
