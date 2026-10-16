@@ -1,6 +1,10 @@
 # Identidade visual
 
-`orkut-digger-logo-v3.png`: logo atual, uma pá magenta com cabo em forma de “o”, criada com a ferramenta integrada de geração de imagens. Fundo transparente; os ícones em `../icons/` são reduções com filtro Lanczos. As imagens anteriores preservam as propostas anteriores.
+`orkut-digger-logo-v4.png`: logo atual, uma pá magenta com empunhadura em D, haste longa e lâmina larga, criada com a ferramenta integrada de geração de imagens. Fundo transparente; os ícones em `../icons/` são reduções com filtro Lanczos, usados pelo manifesto e pelo botão da extensão. As imagens anteriores preservam as propostas anteriores.
+
+## Prompt da versão 4
+
+Use case: logo-brand. One minimal flat logo for Orkut Digger, a digital archaeology research browser extension. Must be immediately unmistakable as a garden digging SPADE / SHOVEL. A single solid magenta #ED008C silhouette, upright with slight diagonal tilt. Classical D-shaped grip at the TOP (flat horizontal rounded top bar with straight sides tapering toward shaft, one hollow opening), a LONG SLENDER straight shaft occupying half of tool length, then a WIDE SQUARED-OFF SPADE BLADE at bottom: broad flat horizontal top shoulders, nearly parallel sides, gently curved but substantially FLAT cutting edge, blade clearly wider than handle. Crucial proportions: visibly LONG handle shaft separates grip from blade; flat broad rectangular blade, NOT a teardrop, NOT a bulb, NOT a heart, NOT a diamond, NOT a spear tip. This must read as a practical digging shovel, never as a sex toy. Friendly soft corners and Orkut magenta supply the Orkut connection, no need for o-shaped ring. Extremely few shapes, one connected silhouette, only the D-grip hole. Professional understated academic identity, recognizable at 16px. No decorative lines, no internal blade detail, no outlines, no gradients, no shine, no shadows, no textures, no additional objects, no text. Square truly transparent canvas, centered, generous safe margins. Single standalone logo only.
 
 ## Prompt da versão com pá
 
